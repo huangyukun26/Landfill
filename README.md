@@ -28,7 +28,7 @@ The current conclusion is:
 - `ESD-only` is more suitable for classification or coarse localization
 - `image + ESD` is the most promising route for improving robustness
 
-See [docs/project_scope.md](./docs/project_scope.md) and [docs/data_inventory.md](./docs/data_inventory.md).
+See [docs/project_scope.md](./docs/project_scope.md), [docs/data_inventory.md](./docs/data_inventory.md), and [docs/data_metadata.md](./docs/data_metadata.md).
 
 ## Repository Layout
 
@@ -112,3 +112,4 @@ python code/test_landfill.py ^
 2. Align landfill samples with ESD tile / year metadata.
 3. Run `ESD-only` classification as a feasibility test.
 4. Evaluate `image + ESD` fusion.
+
