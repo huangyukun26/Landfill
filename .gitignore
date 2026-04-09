@@ -1,0 +1,41 @@
+﻿# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+
+# Local experiment outputs
+code/output/
+outputs/
+logs/
+runs/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+
+# Local datasets and downloaded assets
+ann/
+img/
+ImageSets/
+tiles_*/
+downloads/
+
+# Notebook and coverage artifacts
+.ipynb_checkpoints/
+.coverage
+coverage.xml
+htmlcov/
