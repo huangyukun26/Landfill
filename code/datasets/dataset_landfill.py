@@ -87,8 +87,7 @@ class Landfill_dataset(Dataset):
     def __init__(self, base_dir, list_dir, split, transform=None):
         self.transform = transform  # using transform in torch!
         self.split = split
-        self.sample_list = open(os.path.join(list_dir, 'test_paper_five_images.txt')).readlines()
-        # self.sample_list = open(os.path.join(list_dir, self.split+'.txt')).readlines()
+        self.sample_list = open(os.path.join(list_dir, self.split + '.txt')).readlines()
         self.data_dir = base_dir
 
     def __len__(self):
@@ -96,8 +95,9 @@ class Landfill_dataset(Dataset):
 
     def __getitem__(self, idx):
             slice_name = self.sample_list[idx].strip('\n')
+            slice_stem = os.path.splitext(slice_name)[0]
             
-            ann=Image.open(os.path.join(self.data_dir, 'ann', self.split, slice_name[:-5]+".png"))
+            ann=Image.open(os.path.join(self.data_dir, 'ann', self.split, slice_stem + ".png"))
 
             ann_np_grey=np.zeros((2000,2000))
 
