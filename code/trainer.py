@@ -220,7 +220,6 @@ def trainer_landfill(args, model, snapshot_path, multimask_output, low_res):
             except:
                 model.module.save_lora_parameters(save_mode_path)
             logging.info("save model to {}".format(save_mode_path))
-            iterator.close()
             break
 
     writer.close()
